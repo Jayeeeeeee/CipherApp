@@ -1,0 +1,8 @@
+Action: Encrypt
+Input Text: asdasd
+Processed Text: cufcuf
+-----
+Action: Encrypt
+Input Text: asdasd
+Processed Text: btebte
+-------------------------------------
