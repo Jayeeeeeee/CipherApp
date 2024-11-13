@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Transactions
+
+Public Class Form1
     Private Sub btn_Process_Click(sender As Object, e As EventArgs) Handles btn_Process.Click
         Dim InputText = txt_Text.Text
         Dim ShiftValue As Integer = num_Shift.Value
@@ -27,9 +29,13 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToScreen()
+        Me.AcceptButton = btn_Process
         dgv_Results.ColumnCount = 3
-        dgv_Results.Columns(0).Name = "Original Text"
-        dgv_Results.Columns(1).Name = "Action"
-        dgv_Results.Columns(2).Name = "Processed Text"
+        dgv_Results.Columns(0).Name = " Original  Text"
+        dgv_Results.Columns(1).Name = " Action"
+        dgv_Results.Columns(2).Name = " Processed Text"
     End Sub
+
 End Class
+

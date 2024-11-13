@@ -2,7 +2,7 @@
     Function Encrypt(ByVal Text As String, Shift As Integer)
         Dim Result As String = ""
 
-        ' Define the range of printable ASCII characters
+        ' Range of ASCII characters || ASCII Code 32-126
         Dim asciiMin As Integer = 32
         Dim asciiMax As Integer = 126
         Dim Range As Integer = asciiMax - asciiMin + 1
@@ -23,17 +23,12 @@
     End Function
 
     Function Decrypt(ByVal Text As String, Shift As Integer)
-        ' Decryption uses the negative shift
-        Return Encrypt(Text, -Shift)
+        Return Encrypt(Text, -Shift) ' Negative Shift
     End Function
 
     Function dgvWrite(ByVal InputText As String, Action As String, ProcessedText As String)
         Return Form1.dgv_Results.Rows.Add(InputText, Action, ProcessedText)
     End Function
-
-    'Function dgvLoad()
-    '    Dim FilePath As String = "C:\Users\xstop\source\repos\CipherApp\CipherApp\ProcessedText.txt"
-    'End Function
 
     Function FileWrite(ByVal Action As String, InputText As String, ProcessedText As String)
         Dim FilePath As String = "C:\Users\xstop\source\repos\CipherApp\CipherApp\ProcessedText.txt"
@@ -51,5 +46,4 @@
             Return False
         End Try
     End Function
-
 End Module
